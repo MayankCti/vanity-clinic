@@ -1,0 +1,146 @@
+@media screen and (min-width: 1800px) {
+  .ct_about_section:before {
+    height: 85%;
+  }
+}
+/* @media screen and (min-width: 1576px) {
+  .ct_about_section:before {
+    height: 85%;
+  }
+} */
+
+@media screen and (min-width: 1400px) {
+  header,
+  .ct_px_80 {
+    padding-inline: 80px;
+  }
+
+  .ct_nav_menu ul li a,
+  .ct_outlin_btn,
+  .ct_skin_btn {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1326px) {
+  .ct_about_section:before {
+    height: 66%;
+    left: 0px;
+    top: -13px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .ct_nav_menu ul {
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    background-color: #ecdfcc;
+    right: 0px;
+    top: 0px;
+    z-index: 9999;
+    padding: 60px 20px;
+    transition: 0.4s ease all;
+    transform: scale(0);
+    height: 100vh;
+    transform-origin: top right;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .ct_nav_menu.ct_menu_show ul {
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  .ct_menu_bar,
+  .ct_close_bar {
+    display: block;
+  }
+  .ct_close_bar {
+    position: absolute;
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+    right: 10px;
+    transition: 0.4s ease all;
+  }
+  .ct_close_bar:hover {
+    background-color: var(--dark_skin_clr);
+  }
+  .ct_close_bar:hover i {
+    transform: rotate(360deg);
+  }
+  .ct_about_section:before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ct_why_book_img img {
+    max-width: 100%;
+    border-radius: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ct_fs_60 {
+    font-size: 40px;
+  }
+  .ct_about_section:before {
+    display: none;
+  }
+  .ct_fs_24 {
+    font-size: 20px;
+  }
+  .ct_flex_direction_col_767,
+  .ct_testimonial_card {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+  .ct_testimonial_card {
+    gap: 20px;
+  }
+  .ct_fs_45 {
+    font-size: 22px;
+  }
+  .ct_fs_20 {
+    font-size: 18px;
+  }
+  .ct_fs_18 {
+    font-size: 16px;
+  }
+  .ct_book_appointment_bg {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .ct_outlin_btn,
+  .ct_skin_btn {
+    padding: 8px 20px;
+  }
+  .ct_fs_60 {
+    font-size: 30px;
+  }
+  header,
+  .ct_px_80 {
+    padding-inline: 15px;
+  }
+  .ct_subfooter {
+    padding-inline: 30px;
+  }
+  .ct_support_form_main {
+    padding: 20px;
+  }
+  .ct_my_booking_tab .nav-pills {
+    flex-direction: column;
+  }
+  .ct_my_booking_tab .nav-pills button {
+    width: 100%;
+  }
+}

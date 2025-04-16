@@ -1,0 +1,7 @@
+.ct_short_heading{
+    overflow: hidden;
+    width: 300px;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    white-space: nowrap;
+}

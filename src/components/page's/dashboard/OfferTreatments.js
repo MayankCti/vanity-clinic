@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { pageRoutes } from "../../../routes/pageRoutes";
 
 const OfferTreatments = () => {
+  const navigate = useNavigate()
   return (
     <section class="ct_px_80 ct_treatment_section ct_pt_100 ct_pb_100">
       <div class="container-fluid">
@@ -41,7 +44,7 @@ const OfferTreatments = () => {
                     <div class="d-flex align-items-center justify-content-between gap-3">
                       <p class="mb-0 ct_fw_700 text-white">$89</p>
                       <a
-                        href="treatment-detail.html"
+                        href="javascript:void(0)" onClick={()=>{navigate(pageRoutes.treatmentDetail)}}
                         class="mb-0 ct_read_more_link"
                       >
                         Read more
@@ -72,7 +75,7 @@ const OfferTreatments = () => {
                     <div class="d-flex align-items-center justify-content-between gap-3">
                       <p class="mb-0 ct_fw_700 text-white">$89</p>
                       <a
-                        href="treatment-detail.html"
+                        href="javascript:void(0)" onClick={()=>{navigate(pageRoutes.treatmentDetail)}}
                         class="mb-0 ct_read_more_link"
                       >
                         Read more
@@ -105,7 +108,7 @@ const OfferTreatments = () => {
                 <div class="d-flex align-items-center justify-content-between gap-3">
                   <p class="mb-0 ct_fw_700 text-white">$89</p>
                   <a
-                    href="treatment-detail.html"
+                    href="javascript:void(0)" onClick={()=>{navigate(pageRoutes.treatmentDetail)}}
                     class="mb-0 ct_read_more_link"
                   >
                     Read more
@@ -130,7 +133,7 @@ const OfferTreatments = () => {
                 <div class="d-flex align-items-center justify-content-between gap-3">
                   <p class="mb-0 ct_fw_700 text-white">$89</p>
                   <a
-                    href="treatment-detail.html"
+                    href="javascript:void(0)" onClick={()=>{navigate(pageRoutes.treatmentDetail)}}
                     class="mb-0 ct_read_more_link"
                   >
                     Read more

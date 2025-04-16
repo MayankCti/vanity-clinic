@@ -1,16 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { UserSvg } from "../components/svgs";
+import { pageRoutes } from "../routes/pageRoutes";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
   const navLinks = [
-    { label: "Home", href: "index.html" },
-    { label: "Treatments", href: "treatment.html" },
-    { label: "Our Team", href: "our-team.html" },
-    { label: "Testimonials", href: "testimonial.html" },
-    { label: "Blogs", href: "blogs.html" },
+    { label: "Home", href: pageRoutes.dashboard },
+    { label: "Treatments", href: pageRoutes.treatments },
+    { label: "Our Team", href: pageRoutes.ourTeams },
+    { label: "Testimonials", href: pageRoutes.testimonials },
+    { label: "Blogs", href: pageRoutes.blogs},
     { label: "Support", href: "support.html" },
   ];
 
+  useEffect(() => {
+    window.scroll(0, 0);
+  }, []);
   return (
     <header>
       <div class="container-fluid">
@@ -29,7 +36,12 @@ const Header = () => {
                   </div>
                   {navLinks.map(({ label, href }) => (
                     <li key={label}>
-                      <a href={href}>{label}</a>
+                      <a
+                        href="javascript:void(0)"
+                        onClick={() => navigate(href)}
+                      >
+                        {label}
+                      </a>
                     </li>
                   ))}
 

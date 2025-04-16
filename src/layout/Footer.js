@@ -1,11 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import { pageRoutes } from "../routes/pageRoutes";
 
 const Footer = () => {
+  const navigate = useNavigate()
   const quickLinks = [
-    { name: "Home", href: "index.html" },
-    { name: "Treatments", href: "treatment.html" },
-    { name: "Our Team", href: "our-team.html" },
-    { name: "Blog", href: "blogs.html" },
+    { name: "Home", href: pageRoutes.dashboard },
+    { name: "Treatments", href: pageRoutes.treatments },
+    { name: "Our Team", href: pageRoutes.ourTeams },
+    { name: "Testimonials", href: pageRoutes.testimonials },
+    { name: "Blog", href: pageRoutes.blogs },
     { name: "Support", href: "support.html" },
     { name: "Book an Appointment", href: "book-appointment.html" },
   ];
@@ -34,7 +38,7 @@ const Footer = () => {
               <ul>
                 {quickLinks.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href}>{link.name}</a>
+                    <a href="javascript:void(0)" onClick={()=>{navigate(link?.href)}}>{link.name}</a>
                   </li>
                 ))}
               </ul>
